@@ -1,33 +1,33 @@
 package ex6_homework;
 
 public class Graph {
-	public void printGraph( int num, String str ) {
+	public void printGraph( int[] nArr ) {
 		
 		// 그래프화
 		
 		int cnt = 0;
 		
-		String numCnt = "의 개수 : ";
+		String shap = "#";
+		String shNum = "";
 		
-		for(int i = 0; i <= 9; i++) {
+		
+		for(int i = 0; i < nArr.length; i++) {
+			System.out.print(i+ "의 갯수 : ");
 			
-			for(int j = 0; j < str.length(); j++) {
-				
-				if( str.charAt(j) == i ) {
-					
-					cnt++;
-					
-					for(int l = 0; l < cnt; l++) {
-						System.out.print("#");
-					} // for inner if
-					
-				} // if 
+			for(int j = 0; j < nArr[i]; j++) {
+				System.out.print("#");
 				
 			} // for inner
 			
+			System.out.println(" " + nArr[i]);
+			
+			
+			
+			
+			
 		} // for outer
 
-		System.out.println();
+		
 		
 		
 	} // printGraph()

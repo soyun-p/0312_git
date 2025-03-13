@@ -15,22 +15,20 @@ public class GraphMain {
 		// 9의 갯수 : ### (3)
 		
 		
-		// 난수 생성
+		// 0번 ~ 9번 index 값에 따른 숫자의 갯수를 담을 배열
+		int[] nArr = new int[10];  
 		
-		int num = new Random().nextInt(9) + 0;
-		
-		
-		// 난수 출력
-		String str = "";
-		
+		// 난수 생성 및 갯수 판단
 		for(int i = 0; i < 100; i++) {
-			str += num;
+			int r = new Random().nextInt(9) + 0;
+			System.out.print(r);
+			nArr[r]++;  // 난수를 돌려서 해당 숫자가 나올 때마다 해당 번호의 인덱스에 위치한 값을 증가시켜서 갯수를 세도록 한다.
 		} // for
 		
-		System.out.println("난수 : " + num);
+		System.out.println();
 		
 		Graph g = new Graph();
-		g.printGraph( num, str );
+		g.printGraph( nArr ); 
 		
 		
 	} // main
